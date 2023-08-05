@@ -6,4 +6,6 @@ a = [1, 3, 2, 4, 5]
 a.sort()
 print(a)
 
+print("hello world")
+print("happy new year")
 
