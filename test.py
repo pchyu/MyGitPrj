@@ -31,10 +31,6 @@ print("Hello World!!")
 # Path: test.py
 
 
-# Path: test.py
-print("hello world!!!!!")
-# Path: test.py
-print("hello world")
 
 
 
