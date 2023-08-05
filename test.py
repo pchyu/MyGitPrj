@@ -29,6 +29,22 @@ print(ran)
 print(bubble(ran))
 print("Hello World!!")
 # Path: test.py
+# search a number from a list with 10 random numbers
+import random
+def random_list(n):
+    a = []
+    for i in range(n):
+        a.append(random.randint(0,100))
+    return a
+def search(a, n):
+    for i in range(len(a)):
+        if a[i] == n:
+            return i
+    return -1
+ran=random_list(10)
+print(ran)
+print(search(ran, 10))
+print("Hello World!!")
 
 
 
