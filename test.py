@@ -48,7 +48,6 @@ print("Hello World!!")
 # Path: test.py
 # search a number from a list with 10 random numbers
 
-# test
 
 
 
