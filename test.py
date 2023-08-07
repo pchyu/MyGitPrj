@@ -44,9 +44,38 @@ def search(a, n):
 ran=random_list(10)
 print(ran)
 print(search(ran, 10))
+
 print("Hello World!!")
 # Path: test.py
 # search a number from a list with 10 random numbers
+
+print("sort and binary search")
+# using sort and binary search
+import random
+def random_list(n):
+    a = []
+    for i in range(n):
+        a.append(random.randint(0,100))
+    return a
+def search(a, n):
+    a.sort()
+    print(a)
+    low = 0
+    high = len(a)-1
+    while low <= high:
+        mid = (low + high) // 2
+        if n == a[mid]:
+            return mid
+        elif n > a[mid]:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+ran=random_list(10)
+print(ran)
+print(search(ran, 10))
+
+
 
 
 
