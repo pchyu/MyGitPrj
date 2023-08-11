@@ -75,14 +75,66 @@ ran=random_list(10)
 print(ran)
 print(search(ran, 10))
 
+# do a binary search
+print("binary search")
+import random
+def random_list(n):
+    a = []
+    for i in range(n):
+        a.append(random.randint(0,100))
+    return a
+def search(a, n):
+    low = 0
+    high = len(a)-1
+    while low <= high:
+        mid = (low + high) // 2
+        if n == a[mid]:
+            return mid
+        elif n > a[mid]:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+ran=random_list(10)
+print(ran)
+print(search(ran, 10))
+
+
+# do a quick sort
+print("quick sort")
+import random
+def random_list(n):
+    a = []
+    for i in range(n):
+        a.append(random.randint(0,100))
+    return a
+def quick(a):
+    if len(a) <= 1:
+        return a
+    pivot = a[len(a)//2]
+    left = []
+    right = []
+    equal = []
+    for i in a:
+        if i < pivot:
+            left.append(i)
+        elif i > pivot:
+            right.append(i)
+        else:
+            equal.append(i)
+    return quick(left) + equal + quick(right)
+
+ran=random_list(10)
+print(ran)
+print(quick(ran))
+print("end of quick sort")
 
 
 
 
 
 
-
-
+#
 
 
 
