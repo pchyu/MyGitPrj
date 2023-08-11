@@ -128,6 +128,7 @@ ran=random_list(10)
 print(ran)
 print(quick(ran))
 print("end of quick sort")
+print("ending")
 
 
 
