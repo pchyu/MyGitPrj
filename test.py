@@ -130,12 +130,39 @@ print(quick(ran))
 print("end of quick sort")
 print("ending")
 
+# do a merge sort
+print("merge sort")
+import random
+def random_list(n):
+    a = []
+    for i in range(n):
+        a.append(random.randint(0,100))
+    return a
+def merge(a, b):
+    c = []
+    while len(a) > 0 and len(b) > 0:
+        if a[0] < b[0]:
+            c.append(a.pop(0))
+        else:
+            c.append(b.pop(0))
+    if len(a) > 0:
+        c += a
+    else:
+        c += b
+    return c
+def merge_sort(a):
+    if len(a) <= 1:
+        return a
+    mid = len(a)//2
+    left = merge_sort(a[:mid])
+    right = merge_sort(a[mid:])
+    return merge(left, right)
+ran=random_list(10)
+print(ran)
+print(merge_sort(ran))
+print("end of merge sort")
+print("ending")
 
-
-
-
-
-#
 
 
 
